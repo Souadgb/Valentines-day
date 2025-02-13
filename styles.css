@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 12px; /* Adjust for smaller text */
+  font-size: 10px; /* Adjust for smaller text */
   font-weight: 300; /* 100-300 for a thinner appearance */
   line-height: 1.4; /* Adjust spacing for better readability */
 }
@@ -81,7 +81,7 @@ body {
 .envelope .letter .text {
   color: #222;
   font-family: 'Patrick Hand', cursive;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .heart {
@@ -184,4 +184,66 @@ body {
   color: red;
   font-size: 180px;
   font-weight: 600;
+}
+/* GLOBAL STYLES */
+body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  font-size: 15px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  opacity: 0; /* Start text as invisible */
+  animation: 
+    typing 3.5s steps(30, end) forwards,
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  30% { border-color: orange }
+}
+
+/* Sequential appearance of lines */
+.typewriter h1:nth-child(1) {
+  animation-delay: 0s; /* First line appears immediately */
+}
+
+.typewriter h1:nth-child(2) {
+  animation-delay: 3.5s; /* Second line starts after the first finishes */
+}
+
+.typewriter h1:nth-child(3) {
+  animation-delay: 7s; /* Third line starts after the second finishes */
+}
+/* Center the .typewriter container */
+.typewriter {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  height: 100vh; /* Ensures it takes up the full viewport height */
+  text-align: center; /* Centers text inside each h1 */
+}
+
+/* Additional styles for the text */
+.typewriter h1 {
+  margin: 0;
+  padding: 10px; /* Optional: Adjust spacing between lines */
 }
