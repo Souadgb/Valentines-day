@@ -1,5 +1,4 @@
-
-/* Google Fonts */
+/* Google Fonts */ 
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
 * {
@@ -21,15 +20,16 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10%;
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* This will center both horizontally and vertically */
   background: #f5edd1;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
 .wrapper .envelope {
   position: relative;
-  width: 425px;
-  height: 230px;
+  width: 500px; /* Increased width */
+  height: 300px; /* Increased height */
 }
 
 .wrapper .envelope::before {
@@ -61,12 +61,13 @@ body {
 
 .envelope .letter {
   position: absolute;
-  width: 54%;
-  height: 80%;
+  width: 80%; /* Increased width */
+  height: 80%; /* Increased height */
   background: #fff;
-  padding: 20px 10px;
-  right: 20%;
-  bottom: 0;
+  padding: 40px; /* Increased padding */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the letter inside the envelope */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   transition: all 1s ease-in-out;
   z-index: 2;
@@ -81,7 +82,8 @@ body {
 .envelope .letter .text {
   color: #222;
   font-family: 'Patrick Hand', cursive;
-  font-size: 20px;
+  font-size: 30px; /* Increased font size */
+  line-height: 1.6; /* Adjust line height for readability */
 }
 
 .heart {
