@@ -1,260 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hey, you.</title>
 
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+    <!-- Google Fonts -->
+   <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' 
+rel='stylesheet' type='text/css'>
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <style>
+      .text {
+        font-family: 'Dancing Script', cursive;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong>Dear Manssour,</strong>
+            <p>
+              You’re always on my mind. In every moment, you somehow find your way into my thoughts. I miss you more than you realize, and I can’t wait to see you again. Je t'aime.
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="heart"></div>
+    </div>
+      
+      <div class="typewriter">
+  <h1>I don’t typically get caught up in <br>this, but this seemed like a great <br>reason to make something for you.</h1>
+  <h1>Happy Valentine’s Day dear.</h1>
+        <h1>Yours, </h1>
+        <h1>Souad G.</h1>
+</div>
 
-* {
-  font-family: "Courier New", monospace;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 10px; /* Adjust for smaller text */
-  font-weight: 300; /* 100-300 for a thinner appearance */
-  line-height: 1.2; /* Adjust spacing for better readability */
-}
 
-body {
-  min-height: 100vh;
-  background: rgb(80, 2, 2);
-  background: radial-gradient(circle, rgba(80, 2, 2, 1) 5%, rgba(0, 0, 0, 1) 100%);
-  padding-top: 5em;
-  display: flex;
-  justify-content: center;
-}
-
-
-.wrapper {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10%;
-  background: #f5edd1;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-}
-
-.wrapper .envelope {
-  position: relative;
-  width: 425px;
-  height: 230px;
-}
-
-.wrapper .envelope::before {
-  position: absolute;
-  content: "";
-  z-index: 4;
-  top: 0;
-  border-top: 130px solid #ecdeb8;
-  border-right: 212px solid transparent;
-  border-left: 212px solid transparent;
-  transform-origin: top;
-  transition: all 0.5s ease-in-out 0.7s;
-}
-
-.wrapper.open .envelope:before {
-  transform: rotateX(180deg);
-  z-index: 0;
-}
-
-.wrapper .envelope::after {
-  position: absolute;
-  content: "";
-  z-index: 4;
-  border-top: 130px solid transparent;
-  border-right: 212px solid #e6cfa7;
-  border-bottom: 100px solid #e6cfa7;
-  border-left: 212px solid #e6cfa7;
-}
-
-.envelope .letter {
-  position: absolute;
-  width: 54%;
-  height: 80%;
-  background: #fff;
-  padding: 20px 10px;
-  right: 20%;
-  bottom: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: all 1s ease-in-out;
-  z-index: 2;
-}
-
-.wrapper.open .envelope .letter {
-  bottom: 100px;
-  transform: scale(1.5);
-  transition-delay: 1s;
-}
-
-.envelope .letter .text {
-  color: #222;
-  font-family: 'Patrick Hand', cursive;
-  font-size: 10px;
-}
-
-.heart {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #990b0b;
-  top: 50%;
-  left: 50%;
-  z-index: 5;
-  transform: translate(-85%, -60%) rotate(45deg);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 0.5s ease-in-out 1s;
-  transform-origin: bottom;
-}
-
-.wrapper.open .heart {
-  transform: translate(-20%, -40%) rotate(230deg);
-  transition-delay: 0.4s;
-}
-
-.heart:before,
-.heart:after {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #990b0b;
-  border-radius: 50%;
-}
-
-.heart:before {
-  top: -7.5px;
-}
-
-.heart:after {
-  right: 7.5px;
-}
-
-.float-text {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-51%) scale(0);
-  top: -10px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  z-index: 1;
-  transition: all 1s ease-in-out;
-}
-
-.wrapper.open .float-text {
-  transform: translateX(-51%) scale(1);
-  top: -400px;
-  transition-delay: 1.2s;
-}
-
-.float-text .big-heart {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  background: #990b0b;
-  transform: rotate(-45deg);
-  box-shadow: -10px 10px 50px red;
-  animation: anim 1s linear infinite;
-}
-
-.float-text .big-heart::before,
-.float-text .big-heart::after {
-  position: absolute;
-  content: "";
-  height: 80px;
-  width: 80px;
-  background: #990b0b;
-  border-radius: 50%;
-}
-
-.float-text .big-heart::before {
-  top: -50%;
-}
-
-.float-text .big-heart::after {
-  right: -50%;
-}
-
-@keyframes anim {
-  0%,
-  100% {
-    transform: scale(1) rotate(-45deg);
-  }
-  60% {
-    transform: scale(0.9) rotate(-45deg);
-  }
-}
-
-.float-text span {
-  min-width: 60px;
-  margin-left: 20px;
-  color: red;
-  font-size: 180px;
-  font-weight: 600;
-}
-/* GLOBAL STYLES */
-body {
-  background: #333;
-  padding-top: 5em;
-  display: flex;
-  justify-content: center;
-}
-
-/* DEMO-SPECIFIC STYLES */
-.typewriter h1 {
-  color: #fff;
-  font-family: monospace;
-  font-size: 15px;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  opacity: 0; /* Start text as invisible */
-  animation: 
-    typing 3.5s steps(30, end) forwards,
-    blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0; opacity: 0; }
-  to { width: 100%; opacity: 1; }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  30% { border-color: orange }
-}
-
-/* Sequential appearance of lines */
-.typewriter h1:nth-child(1) {
-  animation-delay: 0s; /* First line appears immediately */
-}
-
-.typewriter h1:nth-child(2) {
-  animation-delay: 3.5s; /* Second line starts after the first finishes */
-}
-
-.typewriter h1:nth-child(3) {
-  animation-delay: 7s; /* Third line starts after the second finishes */
-}
-.typewriter h1:nth-child(4) {
-  animation-delay: 10.5s; /* Third line starts after the second finishes */
-}
-/* Center the .typewriter container */
-.typewriter {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers horizontally */
-  width: 415px; /* Match the envelope width */
-  max-width: 100%; /* Ensure responsiveness on smaller screens */
-  height: 100vh; /* Ensures it takes up the full viewport height */
-  text-align: center; /* Centers text inside each h1 */
-  margin: 0 auto; /* Centers the .typewriter container horizontally */
-}
-
-/* Additional styles for the text */
-.typewriter h1 {
-  margin: 0;
-  padding: 8px; /* Optional: Adjust spacing between lines */
-}
+    <script src="app.js"></script>
+  </body>
+</html>
