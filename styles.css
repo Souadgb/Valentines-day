@@ -3,13 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Courier New", monospace;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px; /* Adjust for smaller text */
   font-weight: 300; /* 100-300 for a thinner appearance */
-  line-height: 1.4; /* Adjust spacing for better readability */
+  line-height: 1.2; /* Adjust spacing for better readability */
 }
 
 body {
@@ -88,7 +88,7 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: red;
+  background: #990b0b;
   top: 50%;
   left: 50%;
   z-index: 5;
@@ -110,7 +110,7 @@ body {
   content: "";
   width: 20px;
   height: 20px;
-  background-color: red;
+  background-color: #990b0b;
   border-radius: 50%;
 }
 
@@ -144,7 +144,7 @@ body {
   position: relative;
   width: 80px;
   height: 80px;
-  background: red;
+  background: #990b0b;
   transform: rotate(-45deg);
   box-shadow: -10px 10px 50px red;
   animation: anim 1s linear infinite;
@@ -156,7 +156,7 @@ body {
   content: "";
   height: 80px;
   width: 80px;
-  background: red;
+  background: #990b0b;
   border-radius: 50%;
 }
 
@@ -232,6 +232,9 @@ body {
 
 .typewriter h1:nth-child(3) {
   animation-delay: 7s; /* Third line starts after the second finishes */
+}
+.typewriter h1:nth-child(4) {
+  animation-delay: 10.5s; /* Third line starts after the second finishes */
 }
 /* Center the .typewriter container */
 .typewriter {
